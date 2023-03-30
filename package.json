@@ -14,16 +14,16 @@
     "@vercel/analytics": "^0.1.8",
     "lodash": "^4.17.21",
     "lucide-react": "^0.88.0",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.2",
     "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
+    "eslint-config-next": "^13.2.4",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
     "tailwindcss-animate": "^1.0.5"

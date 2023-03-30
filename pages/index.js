@@ -11,8 +11,10 @@ import { getRandomSeed } from "lib/seeds";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export const appName = "Paint by Text";
-export const appSubtitle = "Edit your photos using written instructions, with the help of an AI.";
-export const appMetaDescription = "Edit your photos using written instructions, with the help of an AI.";
+export const appSubtitle =
+  "Edit your photos using written instructions, with the help of an AI.";
+export const appMetaDescription =
+  "Edit your photos using written instructions, with the help of an AI.";
 
 export default function Home() {
   const [events, setEvents] = useState([]);
@@ -63,7 +65,7 @@ export default function Home() {
       },
       body: JSON.stringify(body),
     });
-    const prediction = await response.json();
+    let prediction = await response.json();
 
     if (response.status !== 201) {
       setError(prediction.detail);
@@ -112,15 +114,16 @@ export default function Home() {
         <meta name="description" content={appMetaDescription} />
         <meta property="og:title" content={appName} />
         <meta property="og:description" content={appMetaDescription} />
-        <meta property="og:image" content="https://paintbytext.chat/opengraph.jpg" />
+        <meta
+          property="og:image"
+          content="https://paintbytext.chat/opengraph.jpg"
+        />
       </Head>
 
       <main className="container max-w-[700px] mx-auto p-5">
         <hgroup>
           <h1 className="text-center text-5xl font-bold m-6">{appName}</h1>
-          <p className="text-center text-xl opacity-60 m-6">
-            {appSubtitle}
-          </p>
+          <p className="text-center text-xl opacity-60 m-6">{appSubtitle}</p>
         </hgroup>
 
         <Messages
